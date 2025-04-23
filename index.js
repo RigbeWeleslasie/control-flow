@@ -130,14 +130,14 @@ clearQueue(queue);
 function retakeTest(studentsScoreArray){
     studentsScoreArray.forEach(student=>{
         let score = student.score;
-        let attempt=0;
+        let attempt=1;
         if(score>=50){
-            console.log(`Attempt:${attempt} , ${student.name}  you have already passed because your score: is ${score} `);
+            console.log(`Attempt:${attempt} , ${student.name}  you have already passed because your score: is ${student.score} `);
         }
         else{
         do{
-            console.log(` Attempt: ${attempt} name: ${student.name}  retake because your : score: is ${student.score} `);     
-            attempt++;giy
+            console.log(` Attempt: ${attempt} name: ${student.name}  retake test because your : score: is ${student.score} `);     
+            attempt++;
             score+=10;  
            
         } while(score < 50);
