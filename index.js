@@ -18,9 +18,9 @@ do{
     vote++;
 }
 while(vote < voteArray.length);
-console.log('vote complited');
+console.log('vote completed');
 }
-let voteArray=['Prime Minster','Doctor','President','Professor'];
+let voteArray=['PM,Meles Zenawi','Dr.Debretsion','Pr.Meresa','Pr.Alemtsehay'];
 votes(voteArray);
 
 //3 Loop through an array of numbers from 1–7 and use a switch to print the corresponding day name.
@@ -61,7 +61,7 @@ correspondingDay(arrayOfDays);
 
 //4 Given an array of password strings, use if...else to: log "Strong" if length >= 8, and "Weak" otherwise.
 
-const passwordString=(arrayofPassword)=>{
+const passwordStrength=(arrayofPassword)=>{
 arrayofPassword.forEach(item=>{
     if(item.length >= 8){
         console.log('Strong password');
@@ -72,7 +72,7 @@ arrayofPassword.forEach(item=>{
 });
 }
 let arrayofPassword=['rg123we2er','kgqwer123wer','kgrfs','kqrg23we']
-passwordString(arrayofPassword);
+passwordStrength(arrayofPassword);
 
 //5 You're building a multilingual site. Use a switch to show greetings based on language codes. I.e "en" → "Hello", "fr" → "Bonjour", "sw" → "Habari".
 
