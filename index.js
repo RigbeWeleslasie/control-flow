@@ -127,14 +127,24 @@ let queue=["Alice","Hagos","Joe","Berhe"];
 clearQueue(queue);
 
 //8 Students retake a test until they score 50 or more. Use do...while to simulate attempts, increasing the score by 10 each time until it's >= 50.
-function retakeTest(){
-    let score=0;
-    let attempt=1;
-    do{
-        console.log(`Attempt: ${attempt}: score:${score}`);
-        score+=10;
-        attempt++;
-    }while(score<50);
-    console.log(`Final: score=${score}, pass after ${attempt-1} attempts!`);
+function retakeTest(studentsScoreArray){
+    studentsScoreArray.forEach(student=>{
+        let score = student.score;
+        let attempt=0;
+        if(score>=50){
+            console.log(`Attempt:${attempt} , ${student.name}  you have already passed because your score: is ${score} `);
+        }
+        else{
+        do{
+            console.log(` Attempt: ${attempt} name: ${student.name}  retake because your : score: is ${student.score} `);     
+            attempt++;giy
+            score+=10;  
+           
+        } while(score < 50);
+        console.log(` name:${student.name} your final is score=${student.score}.So, you pass after ${attempt} attempts!`); 
 }
-retakeTest();
+});
+}
+
+let studentsScoreArray=[{"name":"Alice","score":50 },{"name":"Rigbe","score":20},{"name":"Helen","score":30},{"name":"Luwam","score":60}]
+retakeTest(studentsScoreArray);
